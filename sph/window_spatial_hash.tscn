@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5mxijva32dn0"]
+
+[ext_resource type="PackedScene" uid="uid://2qnegehhrso1" path="res://sph/sph_spatial_hash.tscn" id="1_acaj2"]
+[ext_resource type="Script" uid="uid://cha2hbe6mcw4g" path="res://sph/window_script.gd" id="1_xraod"]
+
+[node name="WindowSpatialHash" type="Window"]
+script = ExtResource("1_xraod")
+
+[node name="SphSpatialHash" parent="." instance=ExtResource("1_acaj2")]
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="size_changed" from="." to="SphSpatialHash" method="_on_window_spatial_hash_size_changed"]

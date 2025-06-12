@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg4gkeuqcjxy5"]
+
+[ext_resource type="Script" uid="uid://cha2hbe6mcw4g" path="res://sph/window_script.gd" id="1_dahrq"]
+[ext_resource type="PackedScene" uid="uid://dyb68qem7krh3" path="res://sph/sph_normal.tscn" id="1_eimdi"]
+
+[node name="WindowNormal" type="Window"]
+script = ExtResource("1_dahrq")
+
+[node name="SphNormal" parent="." instance=ExtResource("1_eimdi")]
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="size_changed" from="." to="SphNormal" method="_on_window_normal_size_changed"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://2qnegehhrso1"]
+
+[ext_resource type="Script" uid="uid://kp8n37fnbf0f" path="res://sph/sph_spatial_hash.gd" id="1_sx6gi"]
+
+[node name="SphSpatialHash" type="Node2D"]
+script = ExtResource("1_sx6gi")
